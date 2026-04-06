@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lastpresso – Handcrafted Matcha & Espresso Drinks in Wien">
+  <meta property="og:title" content="Lastpresso Café Wien">
+  <meta property="og:description" content="Handcrafted Matcha & Espresso Drinks">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  <title>Lastpresso – Café Wien</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a class="nav-logo" href="#">Lastpresso</a>
+    <div class="nav-right">
+      <a class="nav-link" href="#menu" data-de="Menü" data-en="Menu">Menü</a>
+      <a class="nav-link" href="#about" data-de="Story" data-en="Story">Story</a>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">DE</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-blob hero-blob--green"></div>
+    <div class="hero-blob hero-blob--pink"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span data-de="Handcrafted in Wien" data-en="Handcrafted in Vienna">Handcrafted in Wien</span>
+        </p>
+        <h1 class="hero-title">
+          <span data-de="Wo" data-en="Where">Wo</span>
+          <em data-de="Matcha" data-en="Matcha">Matcha</em><br>
+          <span data-de="zur Kunst wird" data-en="becomes art">zur Kunst wird</span>
+        </h1>
+        <p class="hero-sub" data-de="Jeder Becher ein kleines Kunstwerk — gemacht mit Liebe und besten Zutaten." data-en="Every cup a small work of art — made with love and the finest ingredients.">
+          Jeder Becher ein kleines Kunstwerk — gemacht mit Liebe und besten Zutaten.
+        </p>
+        <a class="hero-cta" href="#menu">
+          <span data-de="Zur Speisekarte" data-en="View Menu">Zur Speisekarte</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="cup-wrap">
+        <div class="cup" id="cup">
+          <img class="cup-img" src="assets/images/cup-hero.png" alt="Lastpresso Erdbeer Matcha To-Go Becher" id="cupImg">
+          <div class="cup-fallback" id="cupFallback">
+            <div class="cup-fallback-inner">LP</div>
+          </div>
+        </div>
+        <p class="cup-hint" aria-hidden="true" data-de="↕ scrolle" data-en="↕ scroll">↕ scrolle</p>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <p class="section-label" data-de="Unsere Story" data-en="Our Story">Unsere Story</p>
+    <h2 class="section-title">
+      <span data-de="Mehr als nur ein" data-en="More than just a">Mehr als nur ein</span>
+      <em data-de="Café" data-en="Café">Café</em>
+    </h2>
+    <p class="section-body" data-de="Lastpresso ist ein Ort, an dem Genuss und Ästhetik aufeinandertreffen. Wir kreieren Getränke, die man mit den Augen trinkt — bevor man den ersten Schluck nimmt." data-en="Lastpresso is a place where pleasure and aesthetics meet. We create drinks you drink with your eyes — before you take the first sip.">
+      Lastpresso ist ein Ort, an dem Genuss und Ästhetik aufeinandertreffen. Wir kreieren Getränke, die man mit den Augen trinkt — bevor man den ersten Schluck nimmt.
+    </p>
+    <div class="about-grid">
+      <div class="about-stat">
+        <span class="stat-icon" aria-hidden="true">🍵</span>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label" data-de="Premium Ceremonial Grade Matcha" data-en="Premium Ceremonial Grade Matcha">Premium Ceremonial Grade Matcha</div>
+        </div>
+      </div>
+      <div class="about-stat">
+        <span class="stat-icon" aria-hidden="true">🍓</span>
+        <div>
+          <div class="stat-num" data-de="Frisch" data-en="Fresh">Frisch</div>
+          <div class="stat-label" data-de="Täglich zubereitetes Erdbeerpüree" data-en="Freshly prepared strawberry purée daily">Täglich zubereitetes Erdbeerpüree</div>
+        </div>
+      </div>
+      <div class="about-stat">
+        <span class="stat-icon" aria-hidden="true">✦</span>
+        <div>
+          <div class="stat-num">Handmade</div>
+          <div class="stat-label" data-de="Jeder Becher einzeln zubereitet" data-en="Every cup individually prepared">Jeder Becher einzeln zubereitet</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="section" id="menu">
+    <p class="section-label" data-de="Speisekarte" data-en="Menu">Speisekarte</p>
+    <h2 class="section-title">
+      <span data-de="Alles was dein" data-en="Everything your">Alles was dein</span>
+      <em data-de="Herz begehrt" data-en="heart desires">Herz begehrt</em>
+    </h2>
+    <p class="section-body" data-de="Von klassischem Espresso bis zu unseren Signature Matcha Kreationen — entdecke unsere komplette Karte." data-en="From classic espresso to our signature matcha creations — discover our full menu.">
+      Von klassischem Espresso bis zu unseren Signature Matcha Kreationen — entdecke unsere komplette Karte.
+    </p>
+    <div class="menu-card">
+      <div class="menu-card-preview" aria-hidden="true">
+        <div class="menu-page-thumb"><span data-de="Getränke" data-en="Drinks">Getränke</span></div>
+        <div class="menu-page-thumb"><span data-de="Signature" data-en="Signature">Signature</span></div>
+        <div class="menu-page-thumb"><span data-de="Specials" data-en="Specials">Specials</span></div>
+      </div>
+      <div class="menu-card-body">
+        <div>
+          <p class="menu-card-title" data-de="Speisekarte 2025" data-en="Menu 2025">Speisekarte 2025</p>
+          <p class="menu-card-sub">PDF · <span data-de="Aktuell" data-en="Current">Aktuell</span></p>
+        </div>
+        <a class="menu-btn" href="assets/menu/speisekarte.pdf" target="_blank" rel="noopener">
+          <span data-de="Öffnen" data-en="Open">Öffnen</span> →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE DRINKS -->
+  <section class="section" id="drinks">
+    <p class="section-label" data-de="Highlights" data-en="Highlights">Highlights</p>
+    <h2 class="section-title">
+      <span data-de="Unsere" data-en="Our">Unsere</span>
+      <em>Signature</em>
+      <span data-de="Drinks" data-en="Drinks">Drinks</span>
+    </h2>
+    <div class="drinks-grid">
+      <div class="drink-item">
+        <div class="drink-color drink-color--matcha" aria-hidden="true"></div>
+        <div>
+          <p class="drink-name">Matcha Latte</p>
+          <p class="drink-desc" data-de="Ceremonial Grade · Hafermilch · cremig" data-en="Ceremonial Grade · Oat Milk · creamy">Ceremonial Grade · Hafermilch · cremig</p>
+        </div>
+        <span class="drink-price">5,90 €</span>
+      </div>
+      <div class="drink-item">
+        <div class="drink-color drink-color--strawberry" aria-hidden="true"></div>
+        <div>
+          <p class="drink-name">Erdbeer Matcha</p>
+          <p class="drink-desc" data-de="Frisches Püree · Matcha · Milch" data-en="Fresh purée · Matcha · Milk">Frisches Püree · Matcha · Milch</p>
+        </div>
+        <span class="drink-price">6,50 €</span>
+      </div>
+      <div class="drink-item">
+        <div class="drink-color drink-color--brown" aria-hidden="true"></div>
+        <div>
+          <p class="drink-name">Brown Sugar Latte</p>
+          <p class="drink-desc" data-de="Espresso · Brauner Zucker · Oat Milk" data-en="Espresso · Brown Sugar · Oat Milk">Espresso · Brauner Zucker · Oat Milk</p>
+        </div>
+        <span class="drink-price">5,50 €</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & LOCATION -->
+  <section class="section" id="visit">
+    <p class="section-label" data-de="Besuche uns" data-en="Visit Us">Besuche uns</p>
+    <h2 class="section-title">
+      <span data-de="Öffnungszeiten" data-en="Opening Hours">Öffnungszeiten</span>
+      <em>&</em>
+      <span data-de="Adresse" data-en="Address">Adresse</span>
+    </h2>
+    <div class="hours-grid">
+      <div class="hours-card">
+        <p class="hours-day" data-de="Mo – Fr" data-en="Mon – Fri">Mo – Fr</p>
+        <p class="hours-time">08:00 – 18:00</p>
+      </div>
+      <div class="hours-card">
+        <p class="hours-day" data-de="Sa – So" data-en="Sat – Sun">Sa – So</p>
+        <p class="hours-time">09:00 – 17:00</p>
+      </div>
+    </div>
+    <div class="map-container">
+      <iframe
+        class="map-iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.9!2d16.37!3d48.21!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDEyJzM2LjAiTiAxNsKwMjInMTIuMCJF!5e0!3m2!1sde!2sat!4v1"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Lastpresso Standort"
+        aria-label="Google Maps: Lastpresso Café Wien">
+      </iframe>
+      <p class="map-address">Musterstraße 12, 1010 Wien</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="reviews">
+    <p class="section-label" data-de="Bewertungen" data-en="Reviews">Bewertungen</p>
+    <h2 class="section-title">
+      <span data-de="Was unsere Gäste" data-en="What our guests">Was unsere Gäste</span>
+      <em data-de="sagen" data-en="say">sagen</em>
+    </h2>
+    <div class="google-badge">
+      <div>
+        <p class="google-rating">4.9 <span aria-hidden="true">⭐</span></p>
+        <p class="google-sub" data-de="basierend auf Google Bewertungen" data-en="based on Google reviews">basierend auf Google Bewertungen</p>
+      </div>
+      <div class="google-logo" aria-label="Google">
+        <span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc05">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#ea4335">e</span>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <article class="testimonial-card">
+        <header class="t-header">
+          <div class="t-avatar" style="--avatar-bg:#4a7a3a;" aria-hidden="true">S</div>
+          <div>
+            <p class="t-name">Sarah M.</p>
+            <p class="t-stars" aria-label="5 von 5 Sternen">★★★★★</p>
+          </div>
+          <span class="t-source">Google</span>
+        </header>
+        <blockquote class="t-text">Der beste Matcha Latte in ganz Wien! Die Atmosphäre ist traumhaft und das Personal super freundlich.</blockquote>
+      </article>
+      <article class="testimonial-card">
+        <header class="t-header">
+          <div class="t-avatar" style="--avatar-bg:#7a4a3a;" aria-hidden="true">M</div>
+          <div>
+            <p class="t-name">Maximilian K.</p>
+            <p class="t-stars" aria-label="5 von 5 Sternen">★★★★★</p>
+          </div>
+          <span class="t-source">Google</span>
+        </header>
+        <blockquote class="t-text">Unglaublich schöne Drinks — sehen aus wie Kunstwerke! Der Erdbeer Matcha ist ein Muss.</blockquote>
+      </article>
+      <article class="testimonial-card">
+        <header class="t-header">
+          <div class="t-avatar" style="--avatar-bg:#3a4a7a;" aria-hidden="true">L</div>
+          <div>
+            <p class="t-name">Laura B.</p>
+            <p class="t-stars" aria-label="5 von 5 Sternen">★★★★★</p>
+          </div>
+          <span class="t-source">Google</span>
+        </header>
+        <blockquote class="t-text">Mein Lieblingsplatz in Wien. Die Qualität ist konstant top — komme jede Woche wieder!</blockquote>
+      </article>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="section" id="instagram">
+    <p class="section-label" data-de="Instagram" data-en="Instagram">Instagram</p>
+    <h2 class="section-title">
+      <span data-de="Folge uns auf" data-en="Follow us on">Folge uns auf</span>
+      <em>Instagram</em>
+    </h2>
+    <div id="behold-widget" class="insta-embed">
+      <div class="insta-fallback-grid">
+        <div class="insta-cell" style="background:linear-gradient(135deg,#2a4a1a,#1a3010)">🍵</div>
+        <div class="insta-cell" style="background:linear-gradient(135deg,#4a1a2a,#2a0e18)">🍓</div>
+        <div class="insta-cell" style="background:linear-gradient(135deg,#1a2a3a,#0e1820)">☕</div>
+        <div class="insta-cell" style="background:linear-gradient(135deg,#3a2a1a,#201608)">✨</div>
+        <div class="insta-cell" style="background:linear-gradient(135deg,#2a3a1a,#162010)">🌿</div>
+        <div class="insta-cell" style="background:linear-gradient(135deg,#3a1a3a,#200820)">💜</div>
+      </div>
+    </div>
+    <a class="insta-handle" href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener" aria-label="Lastpresso auf Instagram">@cafelastpresso</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-logo">Lastpresso</p>
+    <nav class="footer-links" aria-label="Footer Navigation">
+      <a class="footer-link" href="#" data-de="Impressum" data-en="Imprint">Impressum</a>
+      <a class="footer-link" href="#" data-de="Datenschutz" data-en="Privacy">Datenschutz</a>
+      <a class="footer-link" href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <p class="footer-copy">© 2025 Lastpresso · Wien</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
