@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lastpresso – Handcrafted Matcha &amp; Espresso Drinks in Wien. Täglich frisch, mit Liebe gemacht.">
+  <meta name="description" content="Lastpresso – Handcrafted Matcha &amp; Espresso Drinks in Edling. Täglich frisch, mit Liebe gemacht.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#120e0a">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Lastpresso – Café Wien">
-  <meta property="og:description" content="Handcrafted Matcha &amp; Espresso Drinks in Wien. Jeder Becher ein kleines Kunstwerk.">
+  <meta property="og:title" content="Lastpresso – Café Edling">
+  <meta property="og:description" content="Handcrafted Matcha &amp; Espresso Drinks in Edling. Jeder Becher ein kleines Kunstwerk.">
   <meta property="og:image" content="assets/images/og-image.jpg">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="de_AT">
+  <meta property="og:locale" content="de_DE">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lastpresso – Café Wien">
-  <meta name="twitter:description" content="Handcrafted Matcha &amp; Espresso Drinks in Wien.">
+  <meta name="twitter:title" content="Lastpresso – Café Edling">
+  <meta name="twitter:description" content="Handcrafted Matcha &amp; Espresso Drinks in Edling.">
   <meta name="twitter:image" content="assets/images/og-image.jpg">
 
-  <title>Lastpresso – Café Wien</title>
+  <title>Lastpresso – Café Edling</title>
   <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico">
   <link rel="apple-touch-icon" href="assets/logo/lastpresso-logo.png">
 
@@ -42,7 +42,9 @@
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <a class="nav-logo" href="#">Lastpresso</a>
+    <a class="nav-logo" href="#" aria-label="Lastpresso – Startseite">
+      <img src="assets/logo/beige.png" alt="Lastpresso" class="nav-logo-img">
+    </a>
     <div class="nav-right">
       <a class="nav-link" href="#menu" data-de="Menü" data-en="Menu">Menü</a>
       <a class="nav-link" href="#about" data-de="Story" data-en="Story">Story</a>
@@ -58,7 +60,7 @@
       <div class="hero-text">
         <p class="hero-eyebrow">
           <span class="eyebrow-dot"></span>
-          <span data-de="Handcrafted in Wien" data-en="Handcrafted in Vienna">Handcrafted in Wien</span>
+          <span data-de="Handcrafted in Edling" data-en="Handcrafted in Edling">Handcrafted in Edling</span>
         </p>
         <h1 class="hero-title">
           <span data-de="Wo" data-en="Where">Wo</span>
@@ -75,7 +77,7 @@
       </div>
       <div class="cup-wrap">
         <div class="cup" id="cup">
-          <img class="cup-img" src="assets/images/cup-hero.png" alt="Lastpresso Erdbeer Matcha To-Go Becher" id="cupImg">
+          <img class="cup-img" src="assets/images/matcha-cup.png" alt="Lastpresso Erdbeer Matcha To-Go Becher" id="cupImg">
           <div class="cup-fallback" id="cupFallback">
             <div class="cup-fallback-inner">LP</div>
           </div>
@@ -146,7 +148,7 @@
           <p class="menu-card-title" data-de="Speisekarte 2025" data-en="Menu 2025">Speisekarte 2025</p>
           <p class="menu-card-sub">PDF · <span data-de="Aktuell" data-en="Current">Aktuell</span></p>
         </div>
-        <a class="menu-btn" href="assets/menu/speisekarte.pdf" target="_blank" rel="noopener">
+        <a class="menu-btn" href="assets/menu/speisekarte-menu.pdf" target="_blank" rel="noopener">
           <span data-de="Öffnen" data-en="Open">Öffnen</span> →
         </a>
       </div>
@@ -199,25 +201,29 @@
     </h2>
     <div class="hours-grid">
       <div class="hours-card">
-        <p class="hours-day" data-de="Mo – Fr" data-en="Mon – Fri">Mo – Fr</p>
-        <p class="hours-time">08:00 – 18:00</p>
+        <p class="hours-day" data-de="Mo, Di, Do, Fr, Sa" data-en="Mon, Tue, Thu, Fri, Sat">Mo, Di, Do, Fr, Sa</p>
+        <p class="hours-time">11:30 – 20:00</p>
       </div>
       <div class="hours-card">
-        <p class="hours-day" data-de="Sa – So" data-en="Sat – Sun">Sa – So</p>
-        <p class="hours-time">09:00 – 17:00</p>
+        <p class="hours-day" data-de="Sonntag" data-en="Sunday">Sonntag</p>
+        <p class="hours-time">12:00 – 19:00</p>
+      </div>
+      <div class="hours-card hours-card--closed">
+        <p class="hours-day" data-de="Mittwoch" data-en="Wednesday">Mittwoch</p>
+        <p class="hours-time hours-time--closed" data-de="Ruhetag" data-en="Closed">Ruhetag</p>
       </div>
     </div>
     <div class="map-container">
       <iframe
         class="map-iframe"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.9!2d16.37!3d48.21!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDEyJzM2LjAiTiAxNsKwMjInMTIuMCJF!5e0!3m2!1sde!2sat!4v1"
+        src="https://maps.google.com/maps?q=Hauptstra%C3%9Fe+29%2C+83533+Edling&output=embed"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         title="Lastpresso Standort"
-        aria-label="Google Maps: Lastpresso Café Wien">
+        aria-label="Google Maps: Lastpresso Hauptstraße 29, 83533 Edling">
       </iframe>
-      <p class="map-address">Musterstraße 12, 1010 Wien</p>
+      <p class="map-address">Hauptstraße 29, 83533 Edling</p>
     </div>
   </section>
 
@@ -230,7 +236,7 @@
     </h2>
     <div class="google-badge">
       <div>
-        <p class="google-rating">4.9 <span aria-hidden="true">⭐</span></p>
+        <p class="google-rating">5.0 <span aria-hidden="true">⭐</span></p>
         <p class="google-sub" data-de="basierend auf Google Bewertungen" data-en="based on Google reviews">basierend auf Google Bewertungen</p>
       </div>
       <div class="google-logo" aria-label="Google">
@@ -240,36 +246,39 @@
     <div class="testimonials-grid">
       <article class="testimonial-card">
         <header class="t-header">
-          <div class="t-avatar" style="--avatar-bg:#4a7a3a;" aria-hidden="true">S</div>
+          <div class="t-avatar" style="--avatar-bg:#4a7a3a;" aria-hidden="true">E</div>
           <div>
-            <p class="t-name">Sarah M.</p>
+            <p class="t-name">Edwin S.</p>
             <p class="t-stars" aria-label="5 von 5 Sternen">★★★★★</p>
           </div>
           <span class="t-source">Google</span>
         </header>
-        <blockquote class="t-text">Der beste Matcha Latte in ganz Wien! Die Atmosphäre ist traumhaft und das Personal super freundlich.</blockquote>
+        <p class="t-time">vor 5 Monaten</p>
+        <blockquote class="t-text">Gemütliches und freundliches Cafe. Der Türkische Mokka und der Kuchen war hervorragend. Bequeme Stühle. Gemütliche Einrichtung und freundlicher Service.</blockquote>
       </article>
       <article class="testimonial-card">
         <header class="t-header">
-          <div class="t-avatar" style="--avatar-bg:#7a4a3a;" aria-hidden="true">M</div>
+          <div class="t-avatar" style="--avatar-bg:#c47c2b;" aria-hidden="true">D</div>
           <div>
-            <p class="t-name">Maximilian K.</p>
+            <p class="t-name">Drio</p>
             <p class="t-stars" aria-label="5 von 5 Sternen">★★★★★</p>
           </div>
           <span class="t-source">Google</span>
         </header>
-        <blockquote class="t-text">Unglaublich schöne Drinks — sehen aus wie Kunstwerke! Der Erdbeer Matcha ist ein Muss.</blockquote>
+        <p class="t-time">vor 7 Monaten</p>
+        <blockquote class="t-text">Mega gut! War jetzt auch schon öfters da, und habe es in meinem Kreis weiterempfohlen!</blockquote>
       </article>
       <article class="testimonial-card">
         <header class="t-header">
-          <div class="t-avatar" style="--avatar-bg:#3a4a7a;" aria-hidden="true">L</div>
+          <div class="t-avatar" style="--avatar-bg:#a03030;" aria-hidden="true">L</div>
           <div>
-            <p class="t-name">Laura B.</p>
+            <p class="t-name">Lina M.</p>
             <p class="t-stars" aria-label="5 von 5 Sternen">★★★★★</p>
           </div>
           <span class="t-source">Google</span>
         </header>
-        <blockquote class="t-text">Mein Lieblingsplatz in Wien. Die Qualität ist konstant top — komme jede Woche wieder!</blockquote>
+        <p class="t-time">vor 10 Monaten</p>
+        <blockquote class="t-text">Endlich ein Café in Edling! Super faire Preise, sehr leckerer Matcha mit Erdbeerpüree. Ich wünsche nur das beste und hoffe dass das Café bestehen bleibt!</blockquote>
       </article>
     </div>
   </section>
@@ -281,15 +290,16 @@
       <span data-de="Folge uns auf" data-en="Follow us on">Folge uns auf</span>
       <em>Instagram</em>
     </h2>
-    <div id="behold-widget" class="insta-embed">
-      <div class="insta-fallback-grid">
-        <div class="insta-cell" style="background:linear-gradient(135deg,#2a4a1a,#1a3010)">🍵</div>
-        <div class="insta-cell" style="background:linear-gradient(135deg,#4a1a2a,#2a0e18)">🍓</div>
-        <div class="insta-cell" style="background:linear-gradient(135deg,#1a2a3a,#0e1820)">☕</div>
-        <div class="insta-cell" style="background:linear-gradient(135deg,#3a2a1a,#201608)">✨</div>
-        <div class="insta-cell" style="background:linear-gradient(135deg,#2a3a1a,#162010)">🌿</div>
-        <div class="insta-cell" style="background:linear-gradient(135deg,#3a1a3a,#200820)">💜</div>
-      </div>
+    <div class="insta-grid">
+      <a href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener" class="insta-item" aria-label="Lastpresso Instagram Post 1">
+        <img src="assets/images/insta1.jpg" alt="Lastpresso Instagram" loading="lazy">
+      </a>
+      <a href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener" class="insta-item" aria-label="Lastpresso Instagram Post 2">
+        <img src="assets/images/insta2.jpg" alt="Lastpresso Instagram" loading="lazy">
+      </a>
+      <a href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener" class="insta-item" aria-label="Lastpresso Instagram Post 3">
+        <img src="assets/images/insta3.jpg" alt="Lastpresso Instagram" loading="lazy">
+      </a>
     </div>
     <a class="insta-handle" href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener" aria-label="Lastpresso auf Instagram">@cafelastpresso</a>
   </section>
@@ -302,7 +312,7 @@
       <a class="footer-link" href="#" data-de="Datenschutz" data-en="Privacy">Datenschutz</a>
       <a class="footer-link" href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener">Instagram</a>
     </nav>
-    <p class="footer-copy">© 2025 Lastpresso · Wien</p>
+    <p class="footer-copy">© 2025 Lastpresso · Edling</p>
   </footer>
 
   <script src="js/main.js"></script>

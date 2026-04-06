@@ -4,7 +4,7 @@
   --surface: #1a1510;
   --surface-2: #221c16;
   --text-primary: #e8d8c0;
-  --text-secondary: #7a6a58;
+  --text-secondary: #a08878;
   --text-muted: #4a3a2a;
   --accent-green: #7ab060;
   --accent-pink: #c04060;
@@ -71,11 +71,14 @@ body > footer {
 .nav.scrolled { background: rgba(18, 14, 10, 0.97); }
 
 .nav-logo {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 18px;
-  color: var(--text-primary);
-  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .nav-right {
@@ -146,6 +149,7 @@ body > footer {
   gap: 24px;
   position: relative;
   z-index: 1;
+  min-height: 0;
 }
 
 .hero-text { flex: 1; }
@@ -209,8 +213,8 @@ body > footer {
 }
 
 .cup {
-  width: 100px;
-  height: 148px;
+  width: 270px;
+  height: 400px;
   position: relative;
   display: flex;
   align-items: center;
@@ -223,6 +227,7 @@ body > footer {
   height: 100%;
   object-fit: contain;
   will-change: transform;
+  color: transparent; /* hide broken-image alt text */
 }
 
 .cup-fallback {
@@ -453,6 +458,14 @@ body > footer {
   font-weight: 600;
   color: var(--text-primary);
 }
+.hours-card--closed {
+  opacity: 0.5;
+}
+.hours-time--closed {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
 
 .map-container { margin-top: 20px; }
 .map-iframe {
@@ -537,6 +550,7 @@ body > footer {
 .t-name { font-size: 13px; font-weight: 600; color: var(--text-primary); }
 .t-stars { font-size: 11px; color: #f0a030; margin-top: 2px; }
 .t-source { margin-left: auto; font-size: 10px; color: var(--text-muted); }
+.t-time { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; }
 
 .t-text {
   font-size: 13px;
@@ -548,25 +562,29 @@ body > footer {
 .t-text::after { content: '"'; }
 
 /* ===== INSTAGRAM ===== */
-.insta-embed {
-  margin-top: 24px;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-
-.insta-fallback-grid {
+.insta-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
+  gap: 8px;
+  margin-top: 24px;
 }
 
-.insta-cell {
+.insta-item {
+  display: block;
   aspect-ratio: 1;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.insta-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.insta-item:hover img {
+  transform: scale(1.04);
 }
 
 .insta-handle {
@@ -626,7 +644,8 @@ body > footer {
   :root { --max-width: 540px; }
 
   .hero-title { font-size: 52px; }
-  .cup { width: 120px; height: 176px; }
+  /* Cup bleibt bei Mobilgröße – Viewport zu schmal für Größenzunahme */
+  .cup { width: 200px; height: 296px; }
 
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; }
   .about-stat:last-child { grid-column: 1 / -1; }
@@ -644,18 +663,22 @@ body > footer {
 
   .nav { padding: 18px 32px; }
 
-  .hero {
-    padding: 100px 32px 60px;
-  }
-  .hero-title { font-size: 58px; }
-  .cup { width: 130px; height: 192px; }
+  .hero { padding: 100px 32px 60px; }
+  .hero-title { font-size: 48px; }
+  .cup { width: 260px; height: 385px; }
   .hero-inner { gap: 36px; }
+
+  /* Drinks: 2 columns at tablet */
+  .drinks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* Desktop: 900px+ */
 @media (min-width: 900px) {
   :root {
-    --max-width: 860px;
+    --max-width: 820px;
     --section-padding: 88px 48px;
   }
 
@@ -666,9 +689,9 @@ body > footer {
     min-height: 100svh;
   }
   .hero-title { font-size: 72px; }
-  .hero-sub { font-size: 15px; max-width: 320px; }
-  .cup { width: 160px; height: 236px; }
-  .hero-inner { gap: 48px; }
+  .hero-sub { font-size: 15px; max-width: 340px; }
+  .cup { width: 310px; height: 459px; }
+  .hero-inner { gap: 56px; }
 
   /* About: 3 columns */
   .about-grid { grid-template-columns: 1fr 1fr 1fr; }
@@ -691,7 +714,7 @@ body > footer {
 /* Desktop groß: 1200px+ */
 @media (min-width: 1200px) {
   :root {
-    --max-width: 1040px;
+    --max-width: 1000px;
     --section-padding: 100px 60px;
   }
 
@@ -699,7 +722,8 @@ body > footer {
 
   .hero { padding: 140px 60px 80px; }
   .hero-title { font-size: 84px; }
-  .cup { width: 180px; height: 266px; }
+  .cup { width: 420px; height: 622px; }
+  .hero-inner { gap: 64px; }
 }
 
 /* Sehr kleines Gerät: max 360px */
@@ -709,7 +733,7 @@ body > footer {
   .nav-link { display: none; }
   .hero { padding: 70px 14px 36px; }
   .hero-title { font-size: 28px; }
-  .cup { width: 80px; height: 118px; }
+  .cup { width: 150px; height: 222px; }
 }
 
 /* Bewegungsreduktion */
