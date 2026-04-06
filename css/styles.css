@@ -620,6 +620,8 @@ body > footer {
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* Tablet: 540px+ */
 @media (min-width: 540px) {
   :root { --max-width: 540px; }
 
@@ -633,8 +635,76 @@ body > footer {
   .testimonial-card:last-child { grid-column: 1 / -1; }
 }
 
+/* Tablet groß: 700px+ */
+@media (min-width: 700px) {
+  :root {
+    --max-width: 680px;
+    --section-padding: 72px 32px;
+  }
+
+  .nav { padding: 18px 32px; }
+
+  .hero {
+    padding: 100px 32px 60px;
+  }
+  .hero-title { font-size: 58px; }
+  .cup { width: 130px; height: 192px; }
+  .hero-inner { gap: 36px; }
+}
+
+/* Desktop: 900px+ */
+@media (min-width: 900px) {
+  :root {
+    --max-width: 860px;
+    --section-padding: 88px 48px;
+  }
+
+  .nav { padding: 20px 48px; }
+
+  .hero {
+    padding: 120px 48px 72px;
+    min-height: 100svh;
+  }
+  .hero-title { font-size: 72px; }
+  .hero-sub { font-size: 15px; max-width: 320px; }
+  .cup { width: 160px; height: 236px; }
+  .hero-inner { gap: 48px; }
+
+  /* About: 3 columns */
+  .about-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .about-stat:last-child { grid-column: auto; }
+
+  /* Drinks: 3 per row */
+  .drinks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* Testimonials: 3 columns */
+  .testimonials-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .testimonial-card:last-child { grid-column: auto; }
+
+  /* Map taller */
+  .map-iframe { height: 280px; }
+}
+
+/* Desktop groß: 1200px+ */
+@media (min-width: 1200px) {
+  :root {
+    --max-width: 1040px;
+    --section-padding: 100px 60px;
+  }
+
+  .nav { padding: 22px 60px; }
+
+  .hero { padding: 140px 60px 80px; }
+  .hero-title { font-size: 84px; }
+  .cup { width: 180px; height: 266px; }
+}
+
+/* Sehr kleines Gerät: max 360px */
 @media (max-width: 360px) {
-  .nav { padding: 14px 14px; }
+  .nav { padding: 14px; }
   .nav-right { gap: 12px; }
   .nav-link { display: none; }
   .hero { padding: 70px 14px 36px; }
@@ -642,6 +712,7 @@ body > footer {
   .cup { width: 80px; height: 118px; }
 }
 
+/* Bewegungsreduktion */
 @media (prefers-reduced-motion: reduce) {
   .cup-img { will-change: auto; }
   html { scroll-behavior: auto; }
