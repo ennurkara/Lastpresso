@@ -177,7 +177,7 @@ body > footer {
   min-height: 0;
 }
 
-.hero-text { flex: 1; }
+.hero-text { flex: 1; position: relative; z-index: 1; }
 
 .hero-eyebrow {
   display: flex;
@@ -234,12 +234,19 @@ body > footer {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  flex-shrink: 0;
+  /* Mobile: absolut im Hintergrund */
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .cup {
-  width: 270px;
-  height: 400px;
+  width: 320px;
+  height: 475px;
   position: relative;
   display: flex;
   align-items: center;
@@ -280,6 +287,7 @@ body > footer {
 }
 
 .cup-hint {
+  display: none; /* versteckt auf Mobile (Cup ist im Hintergrund) */
   font-size: 9px;
   color: var(--text-muted);
   letter-spacing: 2px;
@@ -669,8 +677,7 @@ body > footer {
   :root { --max-width: 540px; }
 
   .hero-title { font-size: 52px; }
-  /* Cup bleibt bei Mobilgröße – Viewport zu schmal für Größenzunahme */
-  .cup { width: 200px; height: 296px; }
+  .cup { width: 360px; height: 534px; }
 
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; }
   .about-stat:last-child { grid-column: 1 / -1; }
@@ -690,8 +697,20 @@ body > footer {
 
   .hero { padding: 100px 32px 60px; }
   .hero-title { font-size: 48px; }
-  .cup { width: 260px; height: 385px; }
   .hero-inner { gap: 36px; }
+
+  /* Ab 700px: Cup wieder im normalen Layout-Fluss */
+  .cup-wrap {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    flex-shrink: 0;
+  }
+  .cup { width: 260px; height: 385px; }
+  .cup-hint { display: block; }
 
   /* Drinks: 2 columns at tablet */
   .drinks-grid {
