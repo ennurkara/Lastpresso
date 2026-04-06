@@ -138,7 +138,7 @@ body > footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 20px 48px;
+  padding: 48px 20px 48px;
   position: relative;
   overflow: hidden;
   max-width: var(--max-width);
@@ -695,7 +695,7 @@ body > footer {
 
   .nav { padding: 18px 32px; }
 
-  .hero { padding: 100px 32px 60px; }
+  .hero { padding: 64px 32px 60px; }
   .hero-title { font-size: 48px; }
   .hero-inner { gap: 36px; }
 
@@ -729,7 +729,7 @@ body > footer {
   .nav { padding: 20px 48px; }
 
   .hero {
-    padding: 120px 48px 72px;
+    padding: 80px 48px 72px;
     min-height: 100svh;
   }
   .hero-title { font-size: 72px; }
@@ -764,7 +764,7 @@ body > footer {
 
   .nav { padding: 22px 60px; }
 
-  .hero { padding: 140px 60px 80px; }
+  .hero { padding: 88px 60px 80px; }
   .hero-title { font-size: 84px; }
   .cup { width: 420px; height: 622px; }
   .hero-inner { gap: 64px; }
@@ -775,7 +775,7 @@ body > footer {
   .nav { padding: 14px; }
   .nav-right { gap: 12px; }
   .nav-link { display: none; }
-  .hero { padding: 70px 14px 36px; }
+  .hero { padding: 40px 14px 36px; }
   .hero-title { font-size: 28px; }
   .cup { width: 150px; height: 222px; }
 }
