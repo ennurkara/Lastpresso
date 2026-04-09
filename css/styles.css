@@ -572,6 +572,12 @@ body > footer {
 .location-btn:hover { opacity: 0.85; transform: translateY(-1px); }
 .location-btn:active { transform: translateY(0); }
 
+.location-btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 .location-btn--google {
   background: var(--accent-green);
   color: var(--bg);
