@@ -551,23 +551,23 @@ body > footer {
 
 .location-actions {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
-  width: 100%;
+  width: fit-content;
 }
 
 .location-btn {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  gap: 8px;
-  padding: 11px 20px;
+  gap: 6px;
+  padding: 9px 16px;
   border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.3px;
   transition: opacity 0.2s, transform 0.15s;
-  width: 100%;
+  width: fit-content;
   background: #ffffff;
   color: #111111;
 }
@@ -820,9 +820,6 @@ body > footer {
   .testimonials-grid { grid-template-columns: 1fr 1fr 1fr; }
   .testimonial-card:last-child { grid-column: auto; }
 
-  /* Location buttons side by side on wider screens */
-  .location-actions { flex-direction: row; }
-  .location-btn { width: auto; flex: 1; }
 }
 
 /* Desktop groß: 1200px+ */
