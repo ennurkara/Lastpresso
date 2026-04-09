@@ -460,11 +460,36 @@ body > footer {
 .drink-color--strawberry { background: linear-gradient(135deg, #c04060, #e07090); }
 .drink-color--brown { background: linear-gradient(135deg, #8a5a2a, #c4944a); }
 .drink-color--caramel { background: linear-gradient(135deg, #b06010, #e0a040); }
+.drink-color--banana { background: linear-gradient(135deg, #b09010, #e0c840); }
 
 .drink-name { font-size: 14px; font-weight: 600; color: var(--text-primary); }
 .drink-size { display: inline-block; font-size: 10px; font-weight: 700; color: var(--bg); background: var(--text-muted); border-radius: 3px; padding: 1px 5px; margin-left: 4px; vertical-align: middle; letter-spacing: 0.05em; }
 .drink-desc { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
 .drink-price { margin-left: auto; font-size: 14px; color: var(--text-primary); font-weight: 500; flex-shrink: 0; }
+
+/* ===== MATCHA CUSTOMIZING ===== */
+.customize-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.customize-step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s;
+}
+.customize-step:hover { border-color: var(--border-hover); }
+
+.customize-step-icon { font-size: 22px; flex-shrink: 0; }
+.customize-step-title { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.customize-step-desc { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
 
 /* ===== HOURS & LOCATION ===== */
 .hours-grid {
