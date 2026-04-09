@@ -553,7 +553,7 @@ body > footer {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  width: fit-content;
+  width: 100%;
 }
 
 .location-btn {
@@ -561,13 +561,13 @@ body > footer {
   align-items: flex-end;
   justify-content: center;
   gap: 6px;
-  padding: 9px 16px;
+  padding: 14px 16px;
   border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.3px;
   transition: opacity 0.2s, transform 0.15s;
-  width: fit-content;
+  flex: 1;
   background: #ffffff;
   color: #111111;
 }
