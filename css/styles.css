@@ -663,6 +663,31 @@ body > footer {
 .t-text::before { content: '"'; }
 .t-text::after { content: '"'; }
 
+.review-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 14px 20px;
+  background: #ffffff;
+  color: #111111;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s, transform 0.15s;
+  width: 100%;
+}
+.review-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+.review-cta:active { transform: translateY(0); }
+
+.review-cta-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* ===== INSTAGRAM ===== */
 .insta-grid {
   display: grid;
