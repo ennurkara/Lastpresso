@@ -3,62 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Datenschutz – Lastpresso</title>
+  <meta name="description" content="Datenschutzerklärung von Lastpresso.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#120e0a">
+
+  <title>Datenschutzerklärung – Lastpresso</title>
+
+  <link rel="canonical" href="https://lastpresso.de/datenschutz.html">
   <link rel="icon" type="image/png" href="assets/logo/beige.png">
+  <link rel="apple-touch-icon" href="assets/logo/beige.png">
   <link rel="stylesheet" href="css/styles.css">
+
   <style>
-    .legal-page {
-      min-height: 100vh;
-      padding: 120px 24px 80px;
-      max-width: 720px;
+    .legal-shell {
+      padding-top: 7rem;
+      padding-bottom: 5rem;
+    }
+
+    .legal-container {
+      width: min(100% - 2rem, 980px);
       margin: 0 auto;
     }
-    .legal-page h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: var(--color-cream);
-      margin-bottom: 48px;
+
+    .legal-intro {
+      margin-bottom: 2rem;
     }
-    .legal-page h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      color: var(--color-cream);
-      margin: 36px 0 12px;
+
+    .legal-card {
+      background: rgba(255, 248, 241, 0.78);
+      border: 1px solid rgba(18, 14, 10, 0.08);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: 0 18px 40px rgba(18, 14, 10, 0.07);
+      backdrop-filter: blur(10px);
     }
-    .legal-page p,
-    .legal-page address {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: var(--color-text-secondary);
+
+    .legal-card + .legal-card {
+      margin-top: 1.25rem;
+    }
+
+    .legal-title {
+      margin: 0 0 0.75rem 0;
+    }
+
+    .legal-card p,
+    .legal-card li,
+    .legal-card address {
+      line-height: 1.75;
+      color: #3d312b;
+    }
+
+    .legal-card h2 {
+      margin: 1.5rem 0 0.75rem;
+      font-size: 1.1rem;
+      color: #120e0a;
+    }
+
+    .legal-card h2:first-child {
+      margin-top: 0;
+    }
+
+    .legal-card a {
+      color: inherit;
+      text-underline-offset: 0.16em;
+    }
+
+    .legal-card address {
       font-style: normal;
     }
-    .legal-page ul {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: var(--color-text-secondary);
-      padding-left: 20px;
-      margin: 12px 0;
+
+    .legal-card ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 0;
     }
-    .legal-page a {
-      color: var(--color-matcha);
+
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 1.5rem;
       text-decoration: none;
+      color: #120e0a;
+      font-weight: 600;
     }
-    .legal-page a:hover {
-      text-decoration: underline;
-    }
-    .back-link {
-      display: inline-block;
-      margin-bottom: 48px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      color: var(--color-matcha);
-      text-decoration: none;
-    }
-    .back-link:hover {
-      text-decoration: underline;
+
+    @media (max-width: 700px) {
+      .legal-shell {
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+      }
+
+      .legal-card {
+        padding: 1.4rem;
+        border-radius: 22px;
+      }
     }
   </style>
 </head>
@@ -68,116 +106,140 @@
     <a class="nav-logo" href="index.html" aria-label="Lastpresso – Startseite">
       <img src="assets/logo/beige.png" alt="Lastpresso" class="nav-logo-img">
     </a>
+    <div class="nav-right">
+      <a class="nav-link" href="index.html#menu" data-de="Menü" data-en="Menu">Menü</a>
+      <a class="nav-link" href="index.html#about" data-de="Story" data-en="Story">Story</a>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">DE</button>
+    </div>
   </nav>
 
-  <main class="legal-page">
-    <a class="back-link" href="index.html">← Zurück zur Startseite</a>
+  <main class="legal-shell">
+    <section class="section legal-container">
+      <div class="legal-intro">
+        <p class="section-label" data-de="Rechtliches" data-en="Legal">Rechtliches</p>
+        <h1 class="section-title legal-title">
+          <span data-de="Unsere" data-en="Our">Unsere</span>
+          <em data-de="Datenschutzerklärung" data-en="Privacy Policy">Datenschutzerklärung</em>
+        </h1>
+        <p class="section-body" data-de="Hier erfährst du, welche personenbezogenen Daten beim Besuch unserer Website verarbeitet werden." data-en="Here you can learn which personal data may be processed when visiting our website.">
+          Hier erfährst du, welche personenbezogenen Daten beim Besuch unserer Website verarbeitet werden.
+        </p>
+      </div>
 
-    <h1>Datenschutzerklärung</h1>
+      <div class="legal-card">
+        <h2>1. Verantwortlicher</h2>
+        <address>
+          <strong>Zara Nur Kara</strong><br>
+          Hauptstraße 29<br>
+          83533 Edling<br>
+          Deutschland<br>
+          E-Mail: <a href="mailto:lastpressocoffee@gmail.com">lastpressocoffee@gmail.com</a><br>
+          Telefon: <a href="tel:+4917631661965">0176 31661965</a>
+        </address>
 
-    <h2>1. Verantwortliche Stelle</h2>
-    <p>Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website ist:</p>
-    <address>
-      Zara Nur Kara<br>
-      Hauptstraße 29<br>
-      83533 Edling<br>
-      E-Mail: <a href="mailto:info@lastpresso.de">info@lastpresso.de</a>
-    </address>
+        <h2>2. Allgemeine Hinweise</h2>
+        <p>
+          Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir verarbeiten
+          personenbezogene Daten ausschließlich im Rahmen der gesetzlichen
+          Datenschutzvorschriften, insbesondere der Datenschutz-Grundverordnung (DSGVO).
+        </p>
 
-    <h2>2. Allgemeines zur Datenverarbeitung</h2>
-    <p>
-      Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst und behandeln Ihre personenbezogenen
-      Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser
-      Datenschutzerklärung. Diese Website erhebt und verarbeitet personenbezogene Daten nur im
-      technisch notwendigen Umfang.
-    </p>
+        <h2>3. Hosting</h2>
+        <p>
+          Diese Website wird über Netlify bereitgestellt. Beim Aufruf der Website
+          werden technisch erforderliche Daten verarbeitet, um die Website auszuliefern
+          und die Stabilität sowie Sicherheit des Betriebs zu gewährleisten.
+        </p>
 
-    <h2>3. Hosting durch Netlify</h2>
-    <p>
-      Diese Website wird gehostet von Netlify, Inc., 512 2nd Street, Suite 200, San Francisco,
-      CA 94107, USA. Beim Aufruf unserer Website werden durch den Hosting-Anbieter automatisch
-      sogenannte Server-Logfiles erfasst. Diese enthalten:
-    </p>
-    <ul>
-      <li>IP-Adresse des anfragenden Geräts</li>
-      <li>Datum und Uhrzeit des Zugriffs</li>
-      <li>Name und URL der abgerufenen Datei</li>
-      <li>Website, von der der Zugriff erfolgte (Referrer)</li>
-      <li>Verwendeter Browser und ggf. das Betriebssystem</li>
-    </ul>
-    <p>
-      Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO
-      (berechtigtes Interesse an der Sicherstellung des technischen Betriebs). Die Daten werden
-      nach 30 Tagen automatisch gelöscht. Netlify verarbeitet Ihre Daten ggf. in den USA.
-      Netlify ist nach dem EU-US Data Privacy Framework zertifiziert. Weitere Informationen
-      finden Sie in der Datenschutzerklärung von Netlify:
-      <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener noreferrer">https://www.netlify.com/privacy/</a>
-    </p>
+        <h2>4. Server-Logfiles</h2>
+        <p>
+          Beim Aufruf dieser Website können durch den Hosting-Anbieter automatisch
+          Informationen in sogenannten Server-Logfiles erfasst werden. Dies sind insbesondere:
+        </p>
+        <ul>
+          <li>IP-Adresse</li>
+          <li>Datum und Uhrzeit des Zugriffs</li>
+          <li>abgerufene Datei bzw. URL</li>
+          <li>übertragene Datenmenge</li>
+          <li>Browsertyp und Browserversion</li>
+          <li>verwendetes Betriebssystem</li>
+          <li>Referrer-URL</li>
+        </ul>
+        <p>
+          Die Verarbeitung dieser Daten erfolgt zur technischen Bereitstellung der Website
+          sowie zur Gewährleistung von Sicherheit und Stabilität auf Grundlage von
+          Art. 6 Abs. 1 lit. f DSGVO.
+        </p>
 
-    <h2>4. Cookies</h2>
-    <p>
-      Diese Website setzt keine Tracking- oder Marketing-Cookies ein. Die Spracheinstellung
-      (Deutsch/Englisch) wird ausschließlich im Arbeitsspeicher Ihres Browsers gehalten und
-      beim Verlassen der Seite nicht gespeichert. Es werden keine Daten an Dritte weitergegeben.
-    </p>
+        <h2>5. Cookies und Tracking</h2>
+        <p>
+          Auf dieser Website werden keine Cookies zu Analyse-, Marketing- oder
+          Trackingzwecken eingesetzt. Es kommen insbesondere keine Dienste wie
+          Google Analytics, Meta Pixel oder Google Tag Manager zum Einsatz.
+        </p>
 
-    <h2>5. Google Maps</h2>
-    <p>
-      Auf der Seite „Besuche uns" ist eine Karte von Google Maps eingebettet (Anbieter: Google
-      Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Beim Laden der Karte
-      wird Ihre IP-Adresse an Google übermittelt. Die Einbindung erfolgt auf Grundlage von
-      Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Darstellung des Standorts).
-      Google kann die übermittelten Daten ggf. in den USA verarbeiten. Google LLC ist nach dem
-      EU-US Data Privacy Framework zertifiziert. Weitere Informationen finden Sie in der
-      Datenschutzerklärung von Google:
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
-    </p>
+        <h2>6. Externe Links</h2>
+        <p>
+          Auf dieser Website sind externe Links zu Diensten von Drittanbietern eingebunden,
+          insbesondere zu Google Maps, Apple Karten und Instagram.
+        </p>
+        <p>
+          Beim bloßen Besuch dieser Website wird keine automatische Verbindung zu diesen
+          Diensten hergestellt. Eine Datenübertragung an den jeweiligen Anbieter erfolgt
+          erst dann, wenn Sie aktiv auf einen entsprechenden Link oder Button klicken.
+        </p>
+        <p>
+          Nach dem Anklicken eines externen Links verlassen Sie unsere Website. Für die
+          Verarbeitung personenbezogener Daten durch den jeweiligen Drittanbieter ist
+          ausschließlich dessen Datenschutzerklärung maßgeblich.
+        </p>
 
-    <h2>6. Kontaktaufnahme per E-Mail</h2>
-    <p>
-      Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben (E-Mail-Adresse, Inhalt der
-      Nachricht) zum Zweck der Bearbeitung der Anfrage und für den Fall von Anschlussfragen
-      gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage
-      ist Art. 6 Abs. 1 lit. f DSGVO.
-    </p>
+        <h2>7. Kontaktaufnahme</h2>
+        <p>
+          Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von Ihnen übermittelten
+          Daten ausschließlich zur Bearbeitung Ihrer Anfrage. Rechtsgrundlage ist Art. 6
+          Abs. 1 lit. b DSGVO, sofern Ihre Anfrage auf den Abschluss oder die Durchführung
+          eines Vertrags gerichtet ist, andernfalls Art. 6 Abs. 1 lit. f DSGVO.
+        </p>
 
-    <h2>7. Ihre Rechte</h2>
-    <p>Sie haben gegenüber uns folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
-    <ul>
-      <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
-      <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
-      <li>Recht auf Löschung (Art. 17 DSGVO)</li>
-      <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
-      <li>Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
-    </ul>
-    <p>
-      Zur Ausübung Ihrer Rechte wenden Sie sich bitte an:
-      <a href="mailto:info@lastpresso.de">info@lastpresso.de</a>
-    </p>
-    <p>
-      Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
-      Die zuständige Aufsichtsbehörde für Bayern ist das Bayerische Landesamt für Datenschutzaufsicht
-      (BayLDA), Promenade 27, 91522 Ansbach.
-    </p>
+        <h2>8. Ihre Rechte</h2>
+        <p>Sie haben im Rahmen der gesetzlichen Vorschriften insbesondere das Recht:</p>
+        <ul>
+          <li>gemäß Art. 15 DSGVO Auskunft über Ihre verarbeiteten Daten zu verlangen,</li>
+          <li>gemäß Art. 16 DSGVO die Berichtigung unrichtiger Daten zu verlangen,</li>
+          <li>gemäß Art. 17 DSGVO die Löschung Ihrer Daten zu verlangen,</li>
+          <li>gemäß Art. 18 DSGVO die Einschränkung der Verarbeitung zu verlangen,</li>
+          <li>gemäß Art. 20 DSGVO Datenübertragbarkeit zu verlangen,</li>
+          <li>gemäß Art. 21 DSGVO Widerspruch gegen die Verarbeitung einzulegen.</li>
+        </ul>
 
-    <h2>8. Aktualität dieser Datenschutzerklärung</h2>
-    <p>
-      Diese Datenschutzerklärung ist aktuell gültig und hat den Stand April 2025. Durch die
-      Weiterentwicklung unserer Website kann es notwendig werden, diese Datenschutzerklärung
-      anzupassen.
-    </p>
+        <h2>9. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+        <p>
+          Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die
+          Verarbeitung Ihrer personenbezogenen Daten zu beschweren.
+        </p>
+
+        <h2>10. Stand</h2>
+        <p>Stand: 9. April 2026</p>
+      </div>
+
+      <a class="legal-back" href="index.html">
+        <span aria-hidden="true">←</span>
+        <span data-de="Zurück zur Startseite" data-en="Back to home">Zurück zur Startseite</span>
+      </a>
+    </section>
   </main>
 
   <footer class="footer">
     <p class="footer-logo">Lastpresso</p>
     <nav class="footer-links" aria-label="Footer Navigation">
-      <a class="footer-link" href="impressum.html">Impressum</a>
-      <a class="footer-link" href="datenschutz.html">Datenschutz</a>
-      <a class="footer-link" href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener">Instagram</a>
+      <a class="footer-link" href="impressum.html" data-de="Impressum" data-en="Imprint">Impressum</a>
+      <a class="footer-link" href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a>
+      <a class="footer-link" href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener noreferrer">Instagram</a>
     </nav>
     <p class="footer-copy">© 2026 Lastpresso · Edling</p>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
