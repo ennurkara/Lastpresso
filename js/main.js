@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCupAnimation();
   initLangToggle();
   initCupImageFallback();
+  initMapButtons();
 });
 
 // Nav background darkens on scroll
@@ -79,4 +80,23 @@ function applyLanguage(lang) {
   document.querySelectorAll(`[${attr}]`).forEach(el => {
     el.textContent = el.getAttribute(attr);
   });
+}
+
+// Show only the relevant map button based on the user's platform.
+// iOS → Apple Maps only | Android → Google Maps only | Desktop → both
+function initMapButtons() {
+  const googleBtn = document.querySelector('.location-btn--google');
+  const appleBtn = document.querySelector('.location-btn--apple');
+  if (!googleBtn || !appleBtn) return;
+
+  const ua = navigator.userAgent;
+  const isIOS = /iPhone|iPad|iPod/.test(ua);
+  const isAndroid = /Android/.test(ua);
+
+  if (isIOS) {
+    googleBtn.style.display = 'none';
+  } else if (isAndroid) {
+    appleBtn.style.display = 'none';
+  }
+  // Desktop: both buttons remain visible
 }
