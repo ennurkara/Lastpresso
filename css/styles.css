@@ -561,13 +561,15 @@ body > footer {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 13px 20px;
-  border-radius: var(--radius-full);
+  padding: 11px 20px;
+  border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.3px;
   transition: opacity 0.2s, transform 0.15s;
   width: 100%;
+  background: #ffffff;
+  color: #111111;
 }
 .location-btn:hover { opacity: 0.85; transform: translateY(-1px); }
 .location-btn:active { transform: translateY(0); }
@@ -577,17 +579,10 @@ body > footer {
   height: 18px;
   flex-shrink: 0;
 }
+.location-btn-icon path { fill: #111111; }
 
-.location-btn--google {
-  background: var(--accent-green);
-  color: var(--bg);
-}
-
-.location-btn--apple {
-  background: transparent;
-  color: var(--text-primary);
-  border: 1px solid var(--border-hover);
-}
+.location-btn--google {}
+.location-btn--apple {}
 
 /* ===== TESTIMONIALS ===== */
 .google-badge {
