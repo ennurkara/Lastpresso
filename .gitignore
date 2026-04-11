@@ -7,3 +7,12 @@
 
 # Testing artifacts
 docs/
+assets/data/Änderungen/
+.env
+.env.*
+.netlify/
+*.pem
+*.key
+*.log
+.vscode/
+.idea/
