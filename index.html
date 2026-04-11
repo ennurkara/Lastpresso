@@ -13,6 +13,7 @@
   <meta property="og:image" content="https://lastpresso.de/assets/images/matcha-cup.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
+  <meta property="og:url" content="https://lastpresso.de/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -32,6 +33,54 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <link rel="canonical" href="https://lastpresso.de/">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "@id": "https://lastpresso.de/#business",
+    "name": "Lastpresso",
+    "url": "https://lastpresso.de/",
+    "telephone": "+4917631661965",
+    "email": "lastpressocoffee@gmail.com",
+    "priceRange": "€",
+    "servesCuisine": ["Matcha", "Espresso", "Tantuni", "Türkisch"],
+    "hasMenu": "https://lastpresso.de/assets/menu/speisekarte-menu.pdf",
+    "image": "https://lastpresso.de/assets/images/matcha-cup.png",
+    "logo": "https://lastpresso.de/assets/logo/beige.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hauptstraße 29",
+      "addressLocality": "Edling",
+      "postalCode": "83533",
+      "addressRegion": "Bayern",
+      "addressCountry": "DE"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Thursday","Friday","Saturday"],
+        "opens": "11:30",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "12:00",
+        "closes": "19:00"
+      }
+    ],
+    "servesCuisine": ["Matcha", "Espresso", "Tantuni", "Türkisch"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "ratingCount": "3",
+      "bestRating": "5"
+    },
+    "sameAs": ["https://www.instagram.com/cafelastpresso"]
+  }
+  </script>
 </head>
 <body>
 
@@ -239,6 +288,7 @@
     </div>
     <div class="location-block">
       <p class="location-address">Hauptstraße 29, 83533 Edling</p>
+      <p class="location-phone"><a href="tel:+4917631661965">+49 176 31661965</a></p>
       <div class="location-actions">
         <a class="location-btn location-btn--google"
            href="https://www.google.com/maps/search/?api=1&query=Hauptstraße+29,+83533+Edling"
