@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lastpresso – Handcrafted Matcha &amp; Espresso Drinks in Edling. Täglich frisch, mit Liebe gemacht.">
+  <meta name="description" content="Lastpresso – Dein Café in Edling bei Wasserburg am Inn. Handgemachter Matcha, Espresso und Tantuni – täglich frisch, mit Liebe gemacht.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#120e0a">
 
@@ -21,11 +21,14 @@
   <meta name="twitter:description" content="Handcrafted Matcha &amp; Espresso Drinks in Edling.">
   <meta name="twitter:image" content="https://lastpresso.de/assets/images/matcha-cup.png">
 
-  <title>Lastpresso – Café Edling</title>
+  <title>Lastpresso – Café & Matcha | Edling bei Wasserburg am Inn</title>
   <link rel="icon" type="image/png" href="assets/logo/beige.png">
   <link rel="apple-touch-icon" href="assets/logo/beige.png">
 
-  <!-- Fonts -->
+  <!-- Preload critical assets -->
+  <link rel="preload" as="image" href="assets/images/matcha-cup.webp" type="image/webp">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+
   <!-- GSAP (local) -->
   <script src="assets/js/gsap.min.js" defer></script>
   <script src="assets/js/ScrollTrigger.min.js" defer></script>
@@ -86,7 +89,7 @@
 
   <nav class="nav" id="nav">
     <a class="nav-logo" href="#" aria-label="Lastpresso – Startseite">
-      <img src="assets/logo/beige.png" alt="Lastpresso" class="nav-logo-img">
+      <img src="assets/logo/beige.png" alt="Lastpresso" class="nav-logo-img" width="120" height="60" loading="eager">
     </a>
     <div class="nav-right">
       <a class="nav-link" href="#menu" data-de="Menü" data-en="Menu">Menü</a>
@@ -122,7 +125,10 @@
       </div>
       <div class="cup-wrap">
         <div class="cup" id="cup">
-          <img class="cup-img" src="assets/images/matcha-cup.png" alt="Lastpresso Erdbeer Matcha To-Go Becher" id="cupImg">
+          <picture>
+            <source type="image/webp" srcset="assets/images/matcha-cup.webp">
+            <img class="cup-img" src="assets/images/matcha-cup.png" alt="Lastpresso Erdbeer Matcha To-Go Becher" id="cupImg" width="320" height="400" fetchpriority="high">
+          </picture>
           <div class="cup-fallback" id="cupFallback">
             <div class="cup-fallback-inner">LP</div>
           </div>
@@ -138,8 +144,8 @@
       <em data-de="Unsere eigene Art" data-en="Our own kind">Unsere eigene Art</em><br>
       <span data-de="von Café" data-en="of café">von Café</span>
     </h2>
-    <p class="section-body" data-de="Bei uns trifft Matcha auf türkisches Streetfood – aber nicht ganz klassisch. Wir machen Dinge auf unsere eigene Art." data-en="With us, matcha meets Turkish street food – but not quite in the classic way. We do things our own way.">
-      Bei uns trifft Matcha auf türkisches Streetfood – aber nicht ganz klassisch. Wir machen Dinge auf unsere eigene Art.
+    <p class="section-body" data-de="Bei uns trifft Matcha auf türkisches Streetfood – aber nicht ganz klassisch. Gründerin Zara Nur Kara hat Lastpresso ins Leben gerufen, um ihre Leidenschaft für Specialty-Drinks und türkische Küche an einem Ort zu vereinen. Tantuni ist ein türkisches Streetfood-Gericht aus gewürztem Rindfleisch in frischem Fladenbrot – bei uns auf unsere eigene Art zubereitet." data-en="At Lastpresso, matcha meets Turkish street food – our own way. Founder Zara Nur Kara created the café to bring together her passion for specialty drinks and Turkish cuisine. Tantuni is a Turkish street food dish of spiced beef served in flatbread – made our own way.">
+      Bei uns trifft Matcha auf türkisches Streetfood – aber nicht ganz klassisch. Gründerin Zara Nur Kara hat Lastpresso ins Leben gerufen, um ihre Leidenschaft für Specialty-Drinks und türkische Küche an einem Ort zu vereinen. Tantuni ist ein türkisches Streetfood-Gericht aus gewürztem Rindfleisch in frischem Fladenbrot – bei uns auf unsere eigene Art zubereitet.
     </p>
     <div class="about-grid">
       <div class="about-stat">
@@ -178,9 +184,9 @@
     </p>
     <div class="menu-card">
       <div class="menu-card-preview" aria-hidden="true">
-        <div class="menu-page-thumb"><img src="assets/images/1.png" alt=""></div>
-        <div class="menu-page-thumb"><img src="assets/images/2.png" alt=""></div>
-        <div class="menu-page-thumb"><img src="assets/images/3.png" alt=""></div>
+        <div class="menu-page-thumb"><img src="assets/images/1.png" alt="" width="80" height="128" loading="lazy"></div>
+        <div class="menu-page-thumb"><img src="assets/images/2.png" alt="" width="80" height="128" loading="lazy"></div>
+        <div class="menu-page-thumb"><img src="assets/images/3.png" alt="" width="80" height="128" loading="lazy"></div>
       </div>
       <div class="menu-card-body">
         <div>
@@ -288,6 +294,7 @@
     </div>
     <div class="location-block">
       <p class="location-address">Hauptstraße 29, 83533 Edling</p>
+      <p class="location-region" data-de="Ca. 8 km von Wasserburg am Inn · 25 km von Rosenheim" data-en="Approx. 8 km from Wasserburg am Inn · 25 km from Rosenheim">Ca. 8 km von Wasserburg am Inn · 25 km von Rosenheim</p>
       <p class="location-phone"><a href="tel:+4917631661965">+49 176 31661965</a></p>
       <div class="location-actions">
         <a class="location-btn location-btn--google"
@@ -392,13 +399,13 @@
     </h2>
     <div class="insta-grid">
       <a href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener noreferrer" class="insta-item" aria-label="Lastpresso Instagram Post 1">
-        <img src="assets/images/insta1.jpg" alt="Lastpresso Instagram" loading="lazy">
+        <img src="assets/images/insta1.jpg" alt="Lastpresso Café Edling Instagram" loading="lazy" width="360" height="451">
       </a>
       <a href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener noreferrer" class="insta-item" aria-label="Lastpresso Instagram Post 2">
-        <img src="assets/images/insta2.jpg" alt="Lastpresso Instagram" loading="lazy">
+        <img src="assets/images/insta2.jpg" alt="Lastpresso Café Edling Instagram" loading="lazy" width="360" height="450">
       </a>
       <a href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener noreferrer" class="insta-item" aria-label="Lastpresso Instagram Post 3">
-        <img src="assets/images/insta3.jpg" alt="Lastpresso Instagram" loading="lazy">
+        <img src="assets/images/insta3.jpg" alt="Lastpresso Café Edling Instagram" loading="lazy" width="360" height="451">
       </a>
     </div>
     <a class="insta-handle" href="https://instagram.com/cafelastpresso" target="_blank" rel="noopener noreferrer" aria-label="Lastpresso auf Instagram">@cafelastpresso</a>
