@@ -19,10 +19,14 @@ Static bilingual (DE/EN) landing page for **Lastpresso** — a matcha & espresso
 | `datenschutz.html` | GDPR privacy policy — `noindex` |
 | `assets/fonts/` | Self-hosted Inter (variable, 400–600) and Playfair Display (italic 400–700, bold 700) |
 | `assets/js/` | Self-hosted GSAP 3 (`gsap.min.js`) and `ScrollTrigger.min.js` |
-| `assets/images/` | Instagram post images (`insta1–3.jpg`), hero cup (`matcha-cup.png`) |
+| `assets/images/` | Hero cup (`matcha-cup.png`), Instagram posts (`insta1–3.jpg`), menu previews (`1–3.png`) |
 | `assets/logo/` | Logo variants (`beige.png`, `matcha.png`) |
 | `assets/menu/` | Menu PDF (`speisekarte-menu.pdf`) |
 | `assets/data/` | Google review screenshots (`review1–3.png`) |
+
+## Page Sections
+
+`index.html` contains these sections in order: `#hero`, `#about`, `#menu` (Speisekarte — shows `1–3.png` previews + PDF link), `#customize` (Matcha Customizing — lets users pick purée, milk, syrup), `#drinks` (signature drinks with size badges), `#visit` (external Google Maps and Apple Maps link buttons + opening hours), `#reviews` (Google review screenshots), `#instagram`.
 
 ## Architecture
 
@@ -33,7 +37,7 @@ All user-visible text elements carry `data-de` and `data-en` attributes. `js/mai
 GSAP + ScrollTrigger are loaded from `assets/js/` (self-hosted, no CDN). The hero cup rotates 360° as the user scrolls through `#hero`. If GSAP is unavailable, the animation silently skips.
 
 ### No External Requests
-All fonts (Inter, Playfair Display), scripts (GSAP, ScrollTrigger), and images are self-hosted. The only third-party request at runtime is the Google Maps `<iframe>` embed in `#visit`. This design was chosen to eliminate GDPR cookie consent requirements under the LG München 2022 ruling.
+All fonts (Inter, Playfair Display), scripts (GSAP, ScrollTrigger), and images are self-hosted. The map actions in `#visit` are external Google Maps and Apple Maps link buttons, avoiding third-party runtime requests. This design was chosen to eliminate GDPR cookie consent requirements under the LG München 2022 ruling.
 
 ### Responsive Breakpoints (in `css/styles.css`)
 - Mobile-first base: `--max-width: 480px`
